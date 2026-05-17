@@ -1,0 +1,496 @@
+message:
+  createClan: |
+    §6Придумайте название клана и введите его в чат.
+    Название клана может содержать до 12 символов, включая символы цвета.
+
+  deleteClan: |
+    Вы действительно желаете удалить клан?
+    Если хотите удалить, то напишите ПОДТВЕРДИТЬ.
+    Если нет, то ОТМЕНИТЬ.
+
+  inviteMessage: |
+    %name%, вас пригласили в клан %nameClan%.
+    Для принятия приглашения вы можете
+    использовать команду /clan accept.
+    Приглашение автоматически будет считаться отклонённым
+    через 5 минут. 
+
+  inviteSentMessage: "Вы отправили приглашение игроку %name%"
+
+
+gui:
+  start:
+    - id: start_select_type
+      item: target
+      slot: 21
+      name: Выберите тип клана
+      lore:
+
+    - id: start_view_list
+      item: paper
+      slot: 23
+      name: Просмотр списка кланова
+      lore:
+
+    - id: start_exit
+      item: arrow
+      slot: 44
+      name: Выход из меню
+      lore:
+  choose:
+    - id: choose_pvp
+      item: iron_sword
+      slot: 20
+      name: PvP клан
+      lore:
+
+    - id: choose_pve
+      item: iron_hoe
+      slot: 24
+      name: PvE клан
+      lore:
+
+    - id: choose_exit
+      item: arrow
+      slot: 44
+      name: Выход из меню
+      lore:
+  unique_effects:
+    - id: effects_enable_multi
+      item: COMPARATOR
+      slot: 46
+      name: Включение нескольких эффектов
+      lore:
+
+    - id: effects_disable_all
+      item: BARRIER
+      slot: 52
+      name: Отключение всех эффектов
+      lore:
+
+    - id: effects_clan_effect
+      item: iron_sword
+      slot: 10
+      name: Клановый эффект
+      lore:
+
+    - id: effects_creator_head
+      item: player_head
+      slot: 4
+      name: Голова создателя
+      lore:
+
+    - id: effects_back
+      item: ARROW
+      slot: 53
+      name: Назад
+      lore:
+
+  update:
+    - id: update_level_up
+      item: diamond
+      slot: 21
+      name: Повышение уровня клана
+      lore:
+
+    - id: update_points
+      item: emerald
+      slot: 23
+      name: Клановые очки
+      lore:
+
+    - id: update_back
+      item: ARROW
+      slot: 53
+      name: Назад
+      lore:
+
+  treasury:
+    - id: treasury_invest_1m
+      item: green_terracotta
+      slot: 27
+      name: Инвестировать 1м монет
+      lore:
+
+    - id: treasury_invest_100k
+      item: lime_concrete
+      slot: 28
+      name: Инвестировать 100к монет
+      lore:
+
+    - id: treasury_invest_10k
+      item: lime_concrete_powder
+      slot: 29
+      name: Инвестировать 10к монет
+      lore:
+
+    - id: treasury_invest_1k
+      item: lime_wool
+      slot: 30
+      name: Инвестировать 1к монет
+      lore:
+
+    - id: treasury_balance
+      item: gold_ingot
+      slot: 13
+      name: Казна вашего клана
+      lore:
+        - "{balance} монеток"
+
+    - id: treasury_withdraw_1k
+      item: red_wool
+      slot: 32
+      name: Скоммуниздить 1к монет
+      lore:
+
+    - id: treasury_withdraw_10k
+      item: red_concrete_powder
+      slot: 33
+      name: Скоммуниздить 10к монет
+      lore:
+
+    - id: treasury_withdraw_100k
+      item: red_concrete
+      slot: 34
+      name: Скоммуниздить 100к монет
+      lore:
+
+    - id: treasury_withdraw_1m
+      item: red_terracotta
+      slot: 35
+      name: Скоммуниздить 1м монет
+      lore:
+
+    - id: treasury_back
+      item: ARROW
+      slot: 53
+      name: Назад
+      lore:
+
+
+  bottled:
+    - id: bottled_info
+      item: honey_bottle
+      slot: 39
+      name: Стакнуть зелье
+      lore:
+
+    - id: bottled
+      item: potion
+      slot: 14
+      name: Зелье силы
+      lore:
+
+    - id: bottled_speed
+      item: potion
+      slot: 23
+      name: Зелье скорости
+      lore:
+
+    - id: bottled_regen
+      item: potion
+      slot: 32
+      name: Зелье регенерации
+      lore:
+
+    - id: bottled_fire
+      item: potion
+      slot: 41
+      name: Зелье силы
+      lore:
+
+    - id: bottled_back
+      item: paper
+      slot: 12
+      name: Информация
+      lore:
+  shop:
+    - id: treasury_back
+      item: ARROW
+      slot: 53
+      name: Назад
+      lore:
+  PVP:
+    - id: pvp_help
+      item: compass
+      slot: 23
+      name: "§b⿻ Помощь по клановой системе ⿻"
+      lore:
+        - "§b| /clan money §f— баланс клана по монетам"
+        - "§b| /clan invest <сумма> §f— пополнить казну клана"
+        - "§b| /clan withdraw <сумма> §f— снять деньги с казны клана"
+        - "§b| /clan take <сумма> §f — снять деньги с казны клана"
+        - ""
+        - "§b| /clan members §f— участники клана"
+        - "§b| /clan invite <ник> §f— пригласить игрока в клан"
+        - "§b| /clan kick <ник> §f— удалить игрока из клана"
+        - ""
+        - "§b| /clan delete §f— удалить клан"
+        - "§b| /clan newleader <ник> §f— передать лидера клана"
+        - ""
+        - "§b| /clan glow §f— выбор подсветки вашей брони"
+        - "§b| /clan pvp §f— вкл./выкл. урон по союзникам"
+        - "§b| /clan list §f— просмотр списка кланов"
+        - "§b| /clan chat §f— переключить свой чат на клановый чат"
+        - "§b| /clan sethome §f— установить клан хом"
+        - "§b| /clan home §f— телепортироваться на клан хом"
+        - "§b| /clan leave §f— покинуть клан"
+
+    - id: pvp_clan_info
+      item: player_head
+      slot: 21
+      name: Информация по клану
+      lore:
+
+    - id: pvp_clan_list
+      item: paper
+      slot: 19
+      name: "§b⿻ Список всех кланов ⿻"
+      lore:
+        - "§b| §fПодробная информация"
+        - "§b| §fпо каждому клану на сервере."
+        - ""
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pvp_disabled_section
+      item: structure_void
+      slot: 10
+      name: "§4▶ §fЭтот раздел §4недоступен."
+      lore:
+        - " "
+        - "§fТип вашего клана не позволяет"
+        - "§fоткрывать этот раздел."
+
+    - id: pvp_stack_potions
+      item: potion
+      slot: 28
+      name: "§b⿻ Стакнуть зелья ⿻"
+      lore:
+        - " "
+        - "§b| §fВ данном разделе ты можешь"
+        - "§b| §fстакнуть зелья, чтобы"
+        - "§b| §fэкономить место в инвентаре."
+        - "   §b• §fЧтобы стакнуть зелья надо:"
+        - "       §6— 5 уровень §fклана"
+        - " "
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pvp_upgrade_clan
+      item: end_crystal
+      slot: 2
+      name: "§b⿻ Прокачать клан ⿻"
+      lore:
+        - " "
+        - "§b | §fВ данном разделе ты можешь"
+        - "§b | §fприобрести клановые очки за сапфиры."
+        - "§b | §fА также увеличивать уровень клана,"
+        - "§b | §fвыполняя необходимые требования."
+        - "§b |"
+        - "§b | §fЧем больше очков и выше уровень,"
+        - "§b | §fтем больше стратегических преимуществ"
+        - "§b | §fполучает ваш клан."
+        - " "
+        - "§b▶ §bНажмите, чтобы открыть раздел"
+
+    - id: pvp_clan_shop
+      item: totem_of_undying
+      slot: 42
+      name: "§6⿻ Магазин клана ⿻"
+      lore:
+        - " "
+        - "§6| §fЗдесь ты можешь §6приобрести "
+        - "§6| уникальные предметы§f и яйца призыва"
+        - "§6| §fиз Премиум-Магазина за монетки,"
+        - "§6| §fа также рубины."
+        - " "
+        - "     §6•§f Чтобы открыть магазин надо:"
+        - "         §6— 1 500 000 монет §fв казне клана"
+        - "         §6— 1 уровень §fклана"
+        - "     §f* Для разблокировки создатель клана"
+        - "     §f  должен нажать по данной иконке."
+        - " "
+        - "§6▶ §fНажмите, чтобы разблокировать"
+
+    - id: pvp_treasury
+      item: gold_ingot
+      slot: 38
+      name: "§b⿻ Казна клана ⿻"
+      lore:
+        - "§b| §fВ данном разделе ты можешь"
+        - "§b| §fпополнять деньгами"
+        - "§b| §fклановый баланс, или же"
+        - "§b| §fскоммуниздить деньги§7."
+        - ""
+        - "§b| §fВалюта необходима для покупки"
+        - "§b| §fразличных клановых преимуществ."
+        - ""
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pvp_exit
+      item: arrow
+      slot: 53
+      name: Выйти из меню
+      lore:
+  PVE:
+    - id: pve_help
+      item: compass
+      slot: 23
+      name: "§b⿻ Помощь по клановой системе ⿻"
+      lore:
+        - " "
+        - "§b| /clan money §f— баланс клана по монетам"
+        - "§b| /clan invest <сумма> §f— пополнить казну клана"
+        - "§b| /clan withdraw <сумма> §f— снять деньги с казны клана"
+        - "§b| /clan take <сумма> §f — снять деньги с казны клана"
+        - ""
+        - "§b| /clan members §f— участники клана"
+        - "§b| /clan invite <ник> §f— пригласить игрока в клан"
+        - "§b| /clan kick <ник> §f— удалить игрока из клана"
+        - ""
+        - "§b| /clan delete §f— удалить клан"
+        - "§b| /clan newleader <ник> §f— передать лидера клана"
+        - ""
+        - "§b| /clan glow §f— выбор подсветки вашей брони"
+        - "§b| /clan captures §f— открыть меню Хатынок"
+        - "§b| /clan pvp §f— вкл./выкл. урон по союзникам"
+        - "§b| /clan list §f— просмотр списка кланов"
+        - "§b| /clan chat §f— переключить свой чат на клановый чат"
+        - "§b| /clan sethome §f— установить клан хом"
+        - "§b| /clan home §f— телепортироваться на клан хом"
+        - "§b| /clan leave §f— покинуть клан"
+
+    - id: pve_clan_info
+      item: player_head
+      slot: 21
+      name: Информация по клану
+      lore:
+
+    - id: pve_clan_list
+      item: paper
+      slot: 19
+      name: "§b⿻ Список всех кланов ⿻"
+      lore:
+        - " "
+        - "§b| §fПодробная информация"
+        - "§b| §fпо каждому клану на сервере."
+        - " "
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pve_armor_color
+      item: leather_chestplate
+      slot: 10
+      name: "§b⿻  Цвет брони ⿻"
+      lore:
+        - " "
+        - "§b| §fВ данном разделе ты"
+        - "§b| §fможешь выбрать цвет брони"
+        - "§b| §fдля подсветки соклановцев"
+        - " "
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pve_stack_potions
+      item: potion
+      slot: 28
+      name: "§b⿻ Стакнуть зелья ⿻"
+      lore:
+        - " "
+        - "§b| §fВ данном разделе ты можешь"
+        - "§b| §fстакнуть зелья, чтобы"
+        - "§b| §fэкономить место в инвентаре."
+        - "   §b• §fЧтобы стакнуть зелья надо:"
+        - "       §6— 5 уровень §fклана"
+        - " "
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pve_random_event
+      item: chorus_flower
+      slot: 25
+      name: "§b⿻ Шальной ивент ⿻"
+      lore:
+        - " "
+        - "§b| §fОсобый ивент, который случайным образом"
+        - "§b| §fвыдаёт §bспециальное задание§f для клана."
+        - " "
+        - "§b| §fТип вашего клана позволяет"
+        - "§b| 12 раз в сутки§f получать задание."
+        - " "
+        - "      §f* Задание выдаётся"
+        - "      §f  с 10:00 до 22:00 по МСК."
+        - " "
+        - "§b• §fНаграда: §61 очко клана"
+        - "§b• §fСтатус: §6Ожидание"
+
+    - id: pve_upgrade_clan
+      item: end_crystal
+      slot: 2
+      name: "§b⿻ Прокачать клан ⿻"
+      lore:
+        - " "
+        - "§b | §fВ данном разделе ты можешь"
+        - "§b | §fприобрести клановые очки за сапфиры."
+        - "§b | §fА также увеличивать уровень клана,"
+        - "§b | §fвыполняя необходимые требования."
+        - "§b |"
+        - "§b | §fЧем больше очков и выше уровень,"
+        - "§b | §fтем больше стратегических преимуществ"
+        - "§b | §fполучает ваш клан."
+        - " "
+        - "§b▶ §bНажмите, чтобы открыть раздел"
+
+    - id: pve_clan_shop
+      item: totem_of_undying
+      slot: 42
+      name: "§6⿻ Магазин клана ⿻"
+      lore:
+        - " "
+        - "§6| §fЗдесь ты можешь §6приобрести "
+        - "§6| уникальные предметы§f и яйца призыва"
+        - "§6| §fиз Премиум-Магазина за монетки,"
+        - "§6| §fа также рубины."
+        - " "
+        - "     §6•§f Чтобы открыть магазин надо:"
+        - "         §6— 1 500 000 монет §fв казне клана"
+        - "         §6— 1 уровень §fклана"
+        - "     §f* Для разблокировки создатель клана"
+        - "     §f  должен нажать по данной иконке."
+        - " "
+        - "§6▶ §fНажмите, чтобы разблокировать"
+
+    - id: pve_treasury
+      item: gold_ingot
+      slot: 38
+      name: "§b⿻ Казна клана ⿻"
+      lore:
+        - "§b| §fВ данном разделе ты можешь"
+        - "§b| §fпополнять деньгами"
+        - "§b| §fклановый баланс, или же"
+        - "§b| §fскоммуниздить деньги§7."
+        - ""
+        - "§b| §fВалюта необходима для покупки"
+        - "§b| §fразличных клановых преимуществ."
+        - ""
+        - "§b▶ §fНажмите, чтобы открыть раздел"
+
+    - id: pve_disabled_section_1
+      item: structure_void
+      slot: 16
+      name: "§4▶ §fЭтот раздел §4недоступен."
+      lore:
+        - " "
+        - "§fТип вашего клана не позволяет"
+        - "§fоткрывать этот раздел."
+
+    - id: pve_disabled_section_2
+      item: structure_void
+      slot: 34
+      name: "§4▶ §fЭтот раздел §4недоступен."
+      lore:
+        - " "
+        - "§fТип вашего клана не позволяет"
+        - "§fоткрывать этот раздел."
+
+    - id: pve_exit
+      item: arrow
+      slot: 53
+      name: "&4▶ &fЗакрыть меню"
+      lore:
