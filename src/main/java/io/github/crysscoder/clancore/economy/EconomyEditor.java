@@ -1,0 +1,10 @@
+package io.github.crysscoder.clancore.economy;
+
+import org.bukkit.entity.Player;
+
+public interface EconomyEditor {
+    double getBalance(Player player);
+    boolean takeMoneyForClanCreation(Player player);
+    boolean withdraw(Player player, double amount);
+    boolean addBalanse(Player player, double amount);
+}

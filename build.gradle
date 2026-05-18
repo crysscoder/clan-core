@@ -4,8 +4,8 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'dev.cryst'
-version = '1.0.0'
+group = 'io.github.crysscoder'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -38,8 +38,8 @@ tasks {
         archiveClassifier.set('')
         archiveVersion.set('')
 
-        relocate 'com.zaxxer.hikari', 'dev.cryst.clancore.libs.hikari'
-        relocate 'com.mysql', 'dev.cryst.clancore.libs.mysql'
+        relocate 'com.zaxxer.hikari', 'io.github.crysscoder.clancore.libs.hikari'
+        relocate 'com.mysql', 'io.github.crysscoder.clancore.libs.mysql'
 
 
     }
