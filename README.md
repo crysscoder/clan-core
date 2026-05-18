@@ -1,27 +1,39 @@
+<div align="center">
+
 # ClanCore
+
+![Release](https://img.shields.io/github/v/release/crysscoder/clan-core?style=flat-square&label=release)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Paper](https://img.shields.io/badge/Paper-1.20.1-2ea44f?style=flat-square)
+![Vault](https://img.shields.io/badge/Vault-required-6f42c1?style=flat-square)
+![MySQL](https://img.shields.io/badge/MySQL-required-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Issues](https://img.shields.io/github/issues/crysscoder/clan-core?style=flat-square)
 
 Paper-плагин кланов с GUI, Vault и MySQL.
 
+[Release](https://github.com/crysscoder/clan-core/releases/latest) · [Issues](https://github.com/crysscoder/clan-core/issues) · [CodeAdapter](https://codeadapter.ru)
+
+</div>
+
 ## Что делает
 
-- Создаёт кланы PvP/PvE типа.
-- Хранит данные кланов в MySQL.
-- Добавляет казну, приглашения и GUI меню.
-- Работает с экономикой через Vault.
+- создаёт PvP/PvE кланы
+- хранит данные кланов в MySQL
+- добавляет казну, приглашения и GUI-меню
+- работает с экономикой через Vault
 
 ## Версии
 
-- Java 17
-- Gradle 8.8
-- Paper API 1.20.1
-- Shadow 8.1.1
-- Lombok 1.18.34
-- Vault API 1.7
-- HikariCP 5.1.0
-- MySQL Connector 8.0.33
-- Plugin `1.0.0`
+| Компонент | Версия |
+| --- | --- |
+| Plugin | `1.0.0` |
+| Java | `17` |
+| Paper API | `1.20.1-R0.1-SNAPSHOT` |
+| Vault API | `1.7` |
+| HikariCP | `5.1.0` |
+| MySQL Connector | `8.0.33` |
 
-## Команда
+## Команды
 
 - `/clan`
 
@@ -33,8 +45,6 @@ Paper-плагин кланов с GUI, Vault и MySQL.
 .\gradlew.bat clean build
 ```
 
-Jar для сервера: `build/libs/ClanCore.jar`
-
 ## Запуск тестового сервера
 
 ```powershell
@@ -43,4 +53,4 @@ Jar для сервера: `build/libs/ClanCore.jar`
 
 ## Настройка
 
-Нужны Vault, economy-плагин и MySQL. Данные БД лежат в `bd.yml`.
+Нужны Vault, economy-плагин и MySQL. Данные базы лежат в `bd.yml`.
