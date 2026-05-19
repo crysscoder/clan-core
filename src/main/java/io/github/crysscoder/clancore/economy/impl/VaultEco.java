@@ -33,16 +33,17 @@ public class VaultEco implements EconomyEditor {
 
     @Override
     public boolean withdraw(Player player, double amount) {
+        if (economy == null || player == null || amount <= 0) return false;
         EconomyResponse response = economy.withdrawPlayer(player, amount);
         return response.transactionSuccess();
     }
 
     @Override
     public boolean addBalanse(Player player, double amount) {
+        if (economy == null || player == null || amount <= 0) return false;
         EconomyResponse response = economy.depositPlayer(player, amount);
         return response.transactionSuccess();
     }
 }
-
 
 
